@@ -8,4 +8,7 @@
  <!--   <ul>
       <li *ngFor="let idea for aIdeas">{{idea}}</li>
     </ul>-->
+    <template ngFor let-ida [ngForOf]="aIdeas">
+            <li>{{idea}}</li>
+    </template>
 </div>
