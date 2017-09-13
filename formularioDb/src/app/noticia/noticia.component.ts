@@ -16,11 +16,7 @@ export class NoticiaComponent implements OnInit {
   }
   cambiaVista() {
     this.noticiaFull = !this.noticiaFull;
-    if (this.noticiaFull)  {
-      this.textoBoton = 'Ocultar noticia';
-    }else {
-      this.textoBoton = 'Mostrar noticia';
-    }
+    this.textoBoton = this.noticiaFull  ? 'Ocultar noticia' : 'Mostrar noticia';
   }
 
 }
