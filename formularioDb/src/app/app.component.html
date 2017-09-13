@@ -1,12 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-header></app-header>
-<div align="center">
+<div>
 <form name ="formulario" align="center">
     <label for="fnombre" id="lblnombre">Indica tu nombre</label>
     <input type="text" id="fnombre" name="fnombre" [(ngModel)]="nombre">
   </form>
-<p>Hola {{nombre.toUpperCase()}}</p>
+<p>Hola {{nombre}}</p>
 </div>
-
+<!--<app-ideas></app-ideas>-->
+<app-noticia></app-noticia>
 <app-footer></app-footer>
 
