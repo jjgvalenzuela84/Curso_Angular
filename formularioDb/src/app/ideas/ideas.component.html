@@ -5,10 +5,7 @@
         <br>
         <button (click)="addIdea()">Añadir idea </button>
     </form>
- <!--   <ul>
-      <li *ngFor="let idea for aIdeas">{{idea}}</li>
-    </ul>-->
-    <template ngFor let-ida [ngForOf]="aIdeas">
-            <li>{{idea}}</li>
-    </template>
+    <ul>
+      <li *ngFor="let idea of aIdeas">{{idea}}</li>
+    </ul>
 </div>
