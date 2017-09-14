@@ -1,0 +1,21 @@
+<div>
+ <form name ="formulario3">
+    <h2>Seleccion de impresoras</h2>
+    <div *ngFor="let impresora of aImpresoras">
+      <input type="radio" name="impr" [(ngModel)]="impresoraSel" value={{impresora.nombre}}> <label>{{impresora.nombre}}</label>    </div>
+    <br>
+    <h2>Seleccion de impresion</h2>   
+    <input type="checkbox" [(ngModel)]="tipoImprSel1" name="color"/>A color<br>
+    <input type="checkbox" [(ngModel)]="tipoImprSel2" name="negro"/>Blanco y negro
+    <br><br>
+    Provincia <select id="select" [(ngModel)]="provSel" name="select">
+       <option *ngFor="let provincia of aProvincias" [ngValue]="provincia" name="a">{{provincia.nombre}}</option>
+    </select>
+  </form>
+    <h2>Resultados:</h2>
+    <p>Impresora Seleccionada: {{impresoraSel}}</p>    
+    <p>Tipo de impresion a color: {{tipoImprSel1}}</p>    
+    <p>Tipo de impresion a blanco/negro: {{tipoImprSel2}}</p>  
+    <p>Impresora Seleccionada: {{provSel.nombre}}</p>   
+         
+</div>
