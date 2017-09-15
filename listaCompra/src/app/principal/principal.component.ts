@@ -1,3 +1,4 @@
+import { GetLibrosService } from './../get-libros/get-libros.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,8 +10,10 @@ export class PrincipalComponent implements OnInit {
 
   public aLista;
   public textoInput: String;
+  public libroBucar: String;
+  public libros = [];
 
-  constructor() { }
+  constructor(private getLibrosService: GetLibrosService) { }
 
   ngOnInit() {
     this.aLista = [];
@@ -26,6 +29,12 @@ export class PrincipalComponent implements OnInit {
     if (index > -1) {
       this.aLista.splice(index, 1);
    }
+
+
   }
 
+  verLibros() {
+    console.log(this.libroBucar);
+    this.libros = this.getLibrosService.getLibros();
+   }
 }
