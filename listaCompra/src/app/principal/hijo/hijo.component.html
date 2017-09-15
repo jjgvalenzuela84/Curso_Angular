@@ -1,1 +1,5 @@
-<input type="radio"> {{elemento.desc}} <button (click)="quitar(elemento)">Quitar</button><br>
+<input type="checkbox" [(ngModel)]="elemento.checked"><span
+[style.textDecoration]="elemento.checked?'line-through':'none'">
+{{elemento.desc}}
+</span> 
+ <button (click)="quitar(elemento)">Quitar</button><br>

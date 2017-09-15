@@ -8,22 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class PrincipalComponent implements OnInit {
 
   public aLista;
-  public textoInput:String;
+  public textoInput: String;
 
   constructor() { }
 
-  ngOnInit() { 
+  ngOnInit() {
     this.aLista = [];
-    
   }
 
   add() {
-    this.aLista.push({desc:this.textoInput, checked:false});
+    this.aLista.push({desc: this.textoInput, checked: false});
     console.log(this.aLista);
   }
 
-  del(elem) {    
-    var index = this.aLista.indexOf(elem);
+  del(elem) {
+    const index = this.aLista.indexOf(elem);
     if (index > -1) {
       this.aLista.splice(index, 1);
    }
