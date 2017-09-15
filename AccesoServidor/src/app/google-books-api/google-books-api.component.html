@@ -1,0 +1,5 @@
+<h1>Google Books</h1>
+<input type="text" [(ngModel)]="libro" name="libro">
+<button (click)='buscar(libro)'>Buscar</button>
+<br><br>
+<p *ngFor='let titulo of aTitulos'>{{titulo}}</p>
