@@ -7,24 +7,20 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./hijo.component.css']
 })
 export class HijoComponent implements OnInit {
-  @Input()
-  public title: string;
 
-  public visible = true;
   @Input()
-  public visibleP: boolean;
-
+  public elemento;
   @Output()
-  public evento =  new EventEmitter<boolean>();
+  public evento = new EventEmitter<any>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  show() {
-    this.visible = !this.visible;
-    this.evento.emit(this.visible);
+  quitar(elem) { 
+   // console.log(elem);
+    this.evento.emit(elem)
   }
 
 }
